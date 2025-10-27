@@ -1,27 +1,19 @@
-# 🧠 Electro-Diffusion Physics-Informed Neural Network (ED-PINN)  
-### for 3D Brain Electric Field Reconstruction from EEG Signals
+# **Electro-Diffusion Physics-Informed Neural Network (ED-PINN) or 3D Brain Electric Field Reconstruction from EEG Signals**
 
 **Author:**  
 **Anshuman Sahoo**  
 M.Tech — Computer Science & Engineering  
-School of Engineering & Technology, DRIEMS University, India  
-R&D Division, Ecometrix Consultants Pvt. Ltd.  
-📧 *anshuman.sahoo1999@gmail.com*
+School of Engineering & Technology, DRIEMS University, India
 
 ---
 
-## 📄 Thesis Title
+## Thesis of the Project
 **“Electro-Diffusion Physics-Informed Neural Network for 3D Brain Electric Field Reconstruction from EEG Signals”**
 
 ---
 
-## 🧩 Abstract
+## Abstract
 Accurate reconstruction of brain electric potentials from scalp EEG signals remains a fundamental challenge in computational neuroengineering due to the ill-posed nature of the EEG inverse problem and the heterogeneous conductivity of head tissues.  
-This work proposes a **Physics-Informed Neural Network (PINN)** architecture that embeds the **quasi-static Maxwell electro-diffusion equation**:
-
-\[
-\nabla \cdot (\sigma \nabla \phi) = -I
-\]
 
 within a deep neural model. The proposed **Electro-Diffusion PINN (ED-PINN)** directly learns the mapping between 3D spatial coordinates and electric potential values while enforcing physical consistency through PDE residuals, boundary conditions, and measured electrode data losses.
 
@@ -31,7 +23,7 @@ Implemented entirely in **Google Colab (PyTorch)**, the ED-PINN framework provid
 
 ---
 
-## ⚙️ Methodology Overview
+## Methodology Overview
 | Stage | Description |
 |--------|--------------|
 | 1. **Forward Model** | Simulated 3D head geometry (multi-layer conductivity) solved for ground-truth potentials via Poisson equation. |
@@ -43,18 +35,7 @@ Implemented entirely in **Google Colab (PyTorch)**, the ED-PINN framework provid
 
 ---
 
-## 🧠 Key Equation
-\[
-\nabla \cdot (\sigma(\mathbf{x}) \nabla \phi(\mathbf{x},t)) = -I(\mathbf{x},t)
-\]
-where  
-- \( \sigma(\mathbf{x}) \): spatially varying conductivity (brain, skull, scalp)  
-- \( \phi(\mathbf{x},t) \): electric potential field  
-- \( I(\mathbf{x},t) \): impressed current source density  
-
----
-
-## 🧮 Implementation
+## Implementation
 **Language:** Python 3 (Google Colab)  
 **Framework:** PyTorch  
 **Dependencies:** `torch`, `numpy`, `scipy`, `matplotlib`, `tqdm`  
@@ -62,7 +43,7 @@ where
 
 ---
 
-## 🚀 How to Run
+## How to Run
 1. Open the notebook `ED_PINN_Brain_Reconstruction.ipynb` in Google Colab.  
 2. Execute all cells sequentially:  
    - Cell 0–4: Environment setup and data generation  
@@ -79,28 +60,28 @@ Outputs include:
 
 ---
 
-## 📊 Sample Results
+## Sample Results
 - Achieved relative potential reconstruction error **< 0.12** on 32³ grid.  
 - Source localization error **< 6 mm** after extended training.  
 - Demonstrated robustness under 5% Gaussian noise on EEG measurements.  
 
 ---
 
-## 📘 Citation
+## Citation
 If you use or reference this work, please cite as:
 
-> **A. Sahoo**, *“Electro-Diffusion Physics-Informed Neural Network for 3D Brain Electric Field Reconstruction from EEG Signals,”* M.Tech Thesis, School of Engineering & Technology, DRIEMS University, India, 2025.
+> **A. Sahoo**, *“Electro-Diffusion Physics-Informed Neural Network for 3D Brain Electric Field Reconstruction from EEG Signals,”* School of Engineering & Technology, DRIEMS University, India, 2025.
 
 ---
 
-## 📚 References
+## References
 1. Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear PDEs.* Journal of Computational Physics.  
 2. Hämäläinen, M., et al. (1993). *Magnetoencephalography—Theory, instrumentation, and applications to noninvasive studies of the working human brain.* Rev. Mod. Phys.  
 3. Gramfort, A., et al. (2013). *MEG and EEG data analysis with MNE-Python.* Frontiers in Neuroscience.  
 
 ---
 
-## 🧭 License
+## License
 © 2025 **Anshuman Sahoo**  
 This project is released for academic research use only. Reuse or publication requires author acknowledgment.
 
